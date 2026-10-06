@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spikingbrain"
+version = "0.1.0"
+description = "High-throughput inference, neuromorphic profiling, and PEFT toolkit for SpikingBrain-7B"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "SpikingBrain Core Team"}
+]
+dependencies = [
+    "torch>=2.1.0",
+    "transformers>=4.38.0",
+    "accelerate>=0.27.0",
+    "numpy>=1.24.0",
+    "pydantic>=2.0.0",
+    "tabulate>=0.9.0",
+    "rich>=13.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["spikingbrain*"]

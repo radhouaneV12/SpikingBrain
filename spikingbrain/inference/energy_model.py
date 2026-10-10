@@ -38,7 +38,7 @@ class NeuromorphicEnergyModel:
         sops = int(dense_flops * spike_rate)
         snn_energy_j = (sops * self.spec.ac_energy_pj) * 1e-12
 
-        energy_savings_ratio = (dense_energy_j / snn_energy_j) if snn_energy_j > 0 else float("inf")
+        energy_savings_ratio = (dense_energy_j / snn_energy_j) if snn_energy_j > 0 else (self.spec.mac_energy_pj / self.spec.ac_energy_pj)
 
         return {
             "dense_flops": dense_flops,

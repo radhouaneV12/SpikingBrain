@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 from typing import Optional, Tuple, Union, Dict, Any, List
-from transformers import PreTrainedModel
+from transformers import PreTrainedModel, GenerationMixin
 from transformers.modeling_outputs import CausalLMOutputWithPast
 
 from spikingbrain.config import SpikingBrainConfig
@@ -53,7 +53,7 @@ class SpikingBrain7BModel(SpikingBrain7BPreTrainedModel):
         return hidden_states, all_spikes
 
 
-class SpikingBrain7BForCausalLM(SpikingBrain7BPreTrainedModel):
+class SpikingBrain7BForCausalLM(SpikingBrain7BPreTrainedModel, GenerationMixin):
     _tied_weights_keys = ["lm_head.weight"]
 
     def __init__(self, config: SpikingBrainConfig):

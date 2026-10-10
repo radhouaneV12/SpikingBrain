@@ -75,5 +75,6 @@ Thumbs.db
 *.bin
 *.pt
 *.pth
-*.safetensors
-*.onnx
+# Documents & Office files
+*.docx
+*.doc

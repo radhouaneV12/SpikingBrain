@@ -20,6 +20,8 @@ from spikingbrain.peft.spike_lora import (
     merge_spike_lora,
 )
 from spikingbrain.profiler.reporter import SpikeProfilerReporter
+from spikingbrain.server.app import create_app
+from spikingbrain.webui.dashboard import build_webui
 
 __all__ = [
     "SpikingBrainConfig",
@@ -34,5 +36,7 @@ __all__ = [
     "inject_spike_lora",
     "merge_spike_lora",
     "SpikeProfilerReporter",
+    "create_app",
+    "build_webui",
     "__version__",
 ]

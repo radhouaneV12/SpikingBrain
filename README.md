@@ -86,3 +86,10 @@ Every response header exposes live neuromorphic metrics:
 - `X-Synaptic-Operations-SOPs`: `144`
 - `X-Energy-Savings-Ratio`: `145.38x`
 
+### Launch the Interactive WebUI Playground
+```powershell
+.venv\Scripts\python.exe -m spikingbrain.webui --port 7860
+```
+Open `http://localhost:7860` to access the live streaming chat and real-time neuromorphic sparsity dashboard.
+
+
